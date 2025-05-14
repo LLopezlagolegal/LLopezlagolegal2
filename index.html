@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas López Lago | Perfil Jurídico Profesional</title>
+    <style>
+        :root {
+            --primary: #00274d;
+            --secondary: #004080;
+            --accent: #e8c050;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.8;
+            background-color: #ffffff;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .profile-frame {
+            width: 220px;
+            height: 280px;
+            border: 10px solid white;
+            border-radius: 2px;
+            background: white;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-frame:hover .profile-photo {
+            transform: scale(1.03);
+        }
+        
+        .profile-text {
+            max-width: 600px;
+            text-align: left;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            background: var(--primary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            padding: 5px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            list-style-type: none;
+        }
+        
+        li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            border: 2px solid transparent;
+        }
+        
+        .btn:hover {
+            background: white;
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .notice {
+            background: var(--light);
+            padding: 30px;
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            margin-bottom: 80px;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .profile-text {
+                text-align: center;
+            }
+            
+            .profile-frame {
+                width: 180px;
+                height: 240px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-frame">
+                <img src="foto-perfil.jpg" alt="Lucas López Lago - Abogado habilitado" class="profile-photo">
+            </div>
+            <div class="profile-text">
+                <h1>Lucas López Lago</h1>
+                <p class="subtitle">Jurista especializado | Habilitado para el ejercicio de la abogacía</p>
+                <p>Graduado en Derecho por la Universidad Carlos III de Madrid con especialización en Propiedad Intelectual, Derecho Administrativo y nuevas tecnologías.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#about">Sobre mí</a>
+            <a href="#services">Áreas de práctica</a>
+            <a href="#tfm">Investigación académica</a>
+            <a href="#contact">Contacto profesional</a>
+            <a href="#notice">Aviso legal</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="about">
+            <h2>Sobre mí</h2>
+            <p>Como jurista especializado, he desarrollado mi carrera con un enfoque multidisciplinar que combina el derecho civil, administrativo y laboral con mi pasión por la propiedad intelectual y las nuevas tecnologías.</p>
+            <p>Tras graduarme en la Universidad Carlos III de Madrid, completé el Máster en Acceso a la Abogacía, obteniendo la calificación de <strong>apto</strong> conforme a la Orden PJC/878/2024 del Ministerio de Justicia.</p>
+              <h2> Mi currículum vitae </h2>
+         <a href="CV.pdf" download class="btn">Descargar CV </a>  
+        </section>
+        
+        <section id="services" class="services">
+            <h2>Áreas de práctica</h2>
+            <ul>
+                <li><strong>Derecho Civil:</strong> Contratos, derecho de familia y sucesiones, responsabilidad civil.</li>
+                <li><strong>Derecho Administrativo:</strong> Procedimientos y reclamaciones ante la Administración Pública.</li>
+                <li><strong>Propiedad Intelectual:</strong> Protección de derechos de autor, marcas y patentes en entornos digitales.</li>
+                <li><strong>Derecho Laboral</strong> </li>
+                <li><strong>Compliance </strong></li>
+            </ul>
+        </section>
+
+        <section id="tfm" class="blog">
+            <h2>Investigación académica</h2>
+            <h3> "El régimen de responsabilidad de los prestadores de servicios para compartir contenidos en línea de la Directiva 2019/790. El ejemplo de TikTok." </h3>
+            <p> Análisis crítico de la Directiva 2019/790 sobre derechos de autor en el mercado único digital, con estudio de caso aplicado a plataformas como TikTok.</p>
+            <a href="tfm-lucas-lopez-lago.pdf" download class="btn">Descargar TFM completo</a>
+            
+            <h3> "Protección legal de las personas con discapacidad en España." </h3>
+            <p> Este trabajo examina críticamente el nuevo modelo social de discapacidad en España tras la reforma introducida por la <strong>Ley 8/2021, de 2 de junio</strong>, contrastándolo con los estándares establecidos en la <strong>Convención sobre los Derechos de las Personas con Discapacidad de 2006</strong>.</p>
+            <a href="tfg-lucas-lopez-lago.pdf" download class="btn">Descargar TFG completo</a>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Contacto profesional</h2>
+            <p>Para consultas académicas o profesionales, puede contactarme a través de los siguientes medios:</p>
+            <p><strong>Correo electrónico:</strong> <a href="mailto:lucaslopezlago3@gmail.com">lucaslopezlago3@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lucas-l%C3%B3pez-lago-9b3659232/" target="_blank">Perfil profesional</a></p>
+        </section>
+
+        <section id="notice" class="notice">
+            <h2>Aviso legal</h2>
+            <p>Esta página web tiene carácter meramente informativo y personal. Aunque poseo la habilitación oficial para el ejercicio de la abogacía, actualmente no ejerzo como abogado colegiado. El contenido aquí presentado no constituye asesoramiento jurídico ni publicidad profesional conforme al Estatuto General de la Abogacía Española.</p>
+
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Lucas López Lago | Todos los derechos reservados</p>
+            <p>Página web personal | Última actualización: mayo 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
